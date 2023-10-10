@@ -1,0 +1,79 @@
+### 1. Test Api Users
+### create data users (POST)
+POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+
+{
+  "name": "Wanto Pujianto",
+  "email": "wantopj02@gmail.com",
+  "password": "wanto123",
+  "profile": {
+    "identity_type": "KTP",
+    "identity_number": "18711277662992",
+    "address": "Jln.coklat Gg.pemancar 3 No.2 Bengkulu"
+  }
+}
+
+### get all users
+GET http://localhost:3000/api/v1/users
+
+### get detail users by: id
+GET http://localhost:3000/api/v1/users/2
+
+
+### get data users with pagination
+GET http://localhost:3000/api/v1/users?limit=2&page=1
+
+### Update data users by: id
+PUT http://localhost:3000/api/v1/users/5
+Content-Type: application/json
+
+{
+  "name": "Wanto Pujianto",
+  "email": "wantopj02@gmail.com",
+  "password": "wanto12345",
+  "profile": {
+    "identity_type": "KTP",
+    "identity_number": "18711277662992",
+    "address": "Jln.coklat Gg.pemancar 3 No.2 Bengkulu"
+  }
+}
+
+### delete data users by: id
+DELETE http://localhost:3000/api/v1/users/2
+
+### 2. Test Api Accounts
+### create data accounts (POST)
+POST http://localhost:3000/api/v1/accounts
+Content-Type: application/json
+
+{
+    "user_id": 5,
+    "bank_name": "Bank BRI",
+    "bank_account_number": "627726627",
+    "balance": 1500000
+}
+
+### get all accounts
+GET http://localhost:3000/api/v1/accounts
+
+### get detail accounts by: id
+GET http://localhost:3000/api/v1/accounts/5
+
+
+### get data accounts with pagination
+GET http://localhost:3000/api/v1/accounts?limit=2&page=1
+
+### update data accounts
+PUT http://localhost:3000/api/v1/accounts/5
+Content-Type: application/json
+
+{
+    "user_id": 5,
+    "bank_name": "Bank BRI",
+    "bank_account_number": "627726627",
+    "balance": 5350000
+}
+
+### delete accounts by: id
+DELETE http://localhost:3000/api/v1/accounts/5
