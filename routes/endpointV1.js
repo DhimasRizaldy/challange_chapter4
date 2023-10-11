@@ -4,6 +4,8 @@ const router = express.Router();
 const { createUsers, getAllUsers, getDetailUsers, deleteUsers, updateUsers } = require("../handler/v1/users");
 // Import Accounts
 const { createAccounts, getAllAccounts, getDetailAccounts, deleteAccounts, updateAccounts } = require("../handler/v1/accounts");
+// Import Transactions
+const { createTransactions, getAllTransactions, getDetailTransactions } = require("../handler/v1/transactions");
 
 // router main url
 router.get("/", (req, res) => {
@@ -21,12 +23,17 @@ router.get("/users/:id", getDetailUsers);
 router.put("/users/:id", updateUsers);
 router.delete("/users/:id", deleteUsers);
 
-// router url users
+// router url accounts
 router.post("/accounts", createAccounts);
 router.get("/accounts", getAllAccounts);
 router.get("/accounts/:id", getDetailAccounts);
 router.put("/accounts/:id", updateAccounts);
-router.delete("/accounts/:id", deleteUsers);
+router.delete("/accounts/:id", deleteAccounts);
+
+// router url transactions
+router.post("/transactions", createTransactions);
+router.get("/transactions", getAllTransactions);
+router.get("/transactions/:id", getDetailTransactions);
 
 // exports router
 module.exports = router;

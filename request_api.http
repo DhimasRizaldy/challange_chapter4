@@ -58,7 +58,7 @@ Content-Type: application/json
 GET http://localhost:3000/api/v1/accounts
 
 ### get detail accounts by: id
-GET http://localhost:3000/api/v1/accounts/5
+GET http://localhost:3000/api/v1/accounts/2
 
 
 ### get data accounts with pagination
@@ -77,3 +77,27 @@ Content-Type: application/json
 
 ### delete accounts by: id
 DELETE http://localhost:3000/api/v1/accounts/5
+
+
+### 3. Transactions
+
+### Create Data Transactions
+POST http://localhost:3000/api/v1/transactions
+Content-Type: application/json
+
+{
+  "source_account_id": 3,
+  "destination_account_id": 5,
+  "amount": 490000
+}
+
+### get data all transactions
+GET http://localhost:3000/api/v1/transactions
+
+### get data by paginations
+GET http://localhost:3000/api/v1/transactions?limit=2&page=1
+
+### get detail data transactions by: id
+GET http://localhost:3000/api/v1/transactions/2
+
+
