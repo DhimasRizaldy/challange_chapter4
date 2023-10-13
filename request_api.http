@@ -4,12 +4,12 @@ POST http://localhost:3000/api/v1/users
 Content-Type: application/json
 
 {
-  "name": "Wanto Pujianto",
-  "email": "wantopj02@gmail.com",
-  "password": "wanto123",
+  "name": "Siti Wulandari",
+  "email": "sitiwulandari@gmail.com",
+  "password": "sitiw020102",
   "profile": {
     "identity_type": "KTP",
-    "identity_number": "18711277662992",
+    "identity_number": "187115526637723",
     "address": "Jln.coklat Gg.pemancar 3 No.2 Bengkulu"
   }
 }
@@ -18,7 +18,7 @@ Content-Type: application/json
 GET http://localhost:3000/api/v1/users
 
 ### get detail users by: id
-GET http://localhost:3000/api/v1/users/2
+GET http://localhost:3000/api/v1/users/6
 
 
 ### get data users with pagination
@@ -31,12 +31,7 @@ Content-Type: application/json
 {
   "name": "Wanto Pujianto",
   "email": "wantopj02@gmail.com",
-  "password": "wanto12345",
-  "profile": {
-    "identity_type": "KTP",
-    "identity_number": "18711277662992",
-    "address": "Jln.coklat Gg.pemancar 3 No.2 Bengkulu"
-  }
+  "password": "wantobdl020102"
 }
 
 ### delete data users by: id
@@ -48,9 +43,9 @@ POST http://localhost:3000/api/v1/accounts
 Content-Type: application/json
 
 {
-    "user_id": 5,
+    "user_id": 6,
     "bank_name": "Bank BRI",
-    "bank_account_number": "627726627",
+    "bank_account_number": "897829992",
     "balance": 1500000
 }
 
